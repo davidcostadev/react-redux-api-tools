@@ -67,6 +67,7 @@ describe('apiMiddleware', () => {
     }
 
     const apiCallFunction = jest.fn().mockResolvedValue({
+      data: body,
       headers: {
         get,
       },
@@ -178,6 +179,7 @@ describe('apiMiddleware', () => {
     }
 
     const apiCallFunction = jest.fn().mockRejectedValue({
+      data: body,
       headers: {
         get,
       },
